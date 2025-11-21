@@ -1,8 +1,8 @@
 version: "3.7"
+
 services:
   facecrop:
-    build: .
-    image: facecrop-service:latest
+    image: gabrielguerra233/facecrop-service:latest   # imagem do Docker Hub
     container_name: facecrop_service
     ports:
       - "9000:9000"
