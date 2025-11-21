@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  facecrop:
+    build: .
+    image: facecrop-service:latest
+    container_name: facecrop_service
+    ports:
+      - "9000:9000"
+    volumes:
+      - /srv/facecrop/videos:/app/videos
+    restart: unless-stopped
+    networks:
+      - polvo_net
+
+networks:
+  polvo_net:
+    external: true
+    name: polvo_net
